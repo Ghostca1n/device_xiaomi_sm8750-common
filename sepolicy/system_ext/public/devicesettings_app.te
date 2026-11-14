@@ -1,0 +1,3 @@
+# XiaomiParts. The type is public so that vendor policy can give the app
+# access to the device's own HALs and nodes.
+type devicesettings_app, domain;

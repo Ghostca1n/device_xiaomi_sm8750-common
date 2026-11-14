@@ -411,5 +411,9 @@ PRODUCT_PACKAGES += \
     libmisight \
     libxlog
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/xiaomi/sm8750-common/sm8750-common-vendor.mk)
