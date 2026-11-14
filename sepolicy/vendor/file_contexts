@@ -11,6 +11,9 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys\.common-service\.xiaomi u:object_r:hal_misys_xiaomi_default_exec:s0
 /vendor/bin/mi_thermald                                             u:object_r:mi_thermald_exec:s0
 
+# Block devices
+/dev/block/platform/soc/1d84000\.ufshc/by-name/(countrycode|idmanager|modemfirmware)_[ab] u:object_r:vendor_custom_ab_block_device:s0
+
 # Data
 /data/vendor/fpdump(/.*)?                                           u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/thermal(/.*)?                                          u:object_r:thermal_data_file:s0
