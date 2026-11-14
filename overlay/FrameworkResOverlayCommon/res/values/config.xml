@@ -21,6 +21,14 @@
          gone to sleep. -->
     <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
+    <!-- Whether the device can keep the screen on while the user looks at it. The
+         attention service needs the front camera, and is part of Android System
+         Intelligence, so the feature is only offered when that is installed. -->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- The component name of the system service that detects the user's attention. -->
+    <string name="config_defaultAttentionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
+
     <!-- Control whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
