@@ -5,8 +5,8 @@
 
 on boot
     # Charging control (Lineage health)
-    chown system system /sys/class/xm_power/charger/charge_interface/charge_enable
-    chmod 0660 /sys/class/xm_power/charger/charge_interface/charge_enable
+    chown system system /sys/class/xm_power/charger/charge_interface/charging_enabled
+    chmod 0660 /sys/class/xm_power/charger/charge_interface/charging_enabled
 
     # Thermal profiles (XiaomiParts)
     chown system system /sys/class/thermal/thermal_message/sconfig
