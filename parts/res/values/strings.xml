@@ -14,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
     <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
@@ -25,4 +25,20 @@
     <string name="thermal_dialer">Dialer</string>
     <string name="thermal_gaming">Gaming</string>
     <string name="thermal_streaming">Streaming</string>
+
+    <!-- Touch -->
+    <string name="touch_title">Touch</string>
+    <string name="touch_summary">Game mode, touch response and glove mode</string>
+    <string name="touch_game_category">Game mode</string>
+    <string name="touch_game_mode_title">Game mode</string>
+    <string name="touch_game_mode_summary">Apply the tuning below to the touchscreen</string>
+    <string name="touch_up_threshold_title">Touch response</string>
+    <string name="touch_tolerance_title">Touch tolerance</string>
+    <string name="touch_aim_sensitivity_title">Aim sensitivity</string>
+    <string name="touch_tap_stability_title">Tap stability</string>
+    <string name="touch_general_category">General</string>
+    <string name="touch_edge_suppression_title">Edge suppression</string>
+    <string name="touch_edge_suppression_level">Level <xliff:g id="level" example="2">%1$d</xliff:g></string>
+    <string name="touch_glove_mode_title">Glove mode</string>
+    <string name="touch_glove_mode_summary">Increase touchscreen sensitivity for use with gloves</string>
 </resources>

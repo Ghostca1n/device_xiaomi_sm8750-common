@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/touch_title">
+
+    <PreferenceCategory
+        android:key="touch_game_category"
+        android:title="@string/touch_game_category">
+
+        <SwitchPreferenceCompat
+            android:key="touch_game_mode"
+            android:title="@string/touch_game_mode_title"
+            android:summary="@string/touch_game_mode_summary"
+            android:defaultValue="false" />
+
+        <SeekBarPreference
+            android:key="touch_up_threshold"
+            android:title="@string/touch_up_threshold_title"
+            android:dependency="touch_game_mode"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:key="touch_tolerance"
+            android:title="@string/touch_tolerance_title"
+            android:dependency="touch_game_mode"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:key="touch_aim_sensitivity"
+            android:title="@string/touch_aim_sensitivity_title"
+            android:dependency="touch_game_mode"
+            app:showSeekBarValue="true" />
+
+        <SeekBarPreference
+            android:key="touch_tap_stability"
+            android:title="@string/touch_tap_stability_title"
+            android:dependency="touch_game_mode"
+            app:showSeekBarValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="touch_general_category"
+        android:title="@string/touch_general_category">
+
+        <ListPreference
+            android:key="touch_edge_suppression"
+            android:title="@string/touch_edge_suppression_title"
+            android:summary="%s"
+            android:dialogTitle="@string/touch_edge_suppression_title" />
+
+        <SwitchPreferenceCompat
+            android:key="touch_glove_mode"
+            android:title="@string/touch_glove_mode_title"
+            android:summary="@string/touch_glove_mode_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

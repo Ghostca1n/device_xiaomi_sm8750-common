@@ -1,0 +1,2 @@
+# Touch
+hal_client_domain(devicesettings_app, hal_touchfeature_xiaomi)
