@@ -78,4 +78,11 @@
     <string name="fps_info_gpu_busy">GPU <xliff:g id="usage" example="40">%1$d</xliff:g>%%</string>
     <string name="fps_info_gpu_clock">GPU <xliff:g id="frequency" example="680">%1$d</xliff:g> MHz</string>
     <string name="fps_info_battery_temp">BAT <xliff:g id="temperature" example="31.5">%1$.1f</xliff:g> \u00B0C</string>
+
+    <!-- Clear speaker -->
+    <string name="clear_speaker_title">Clear speaker</string>
+    <string name="clear_speaker_summary">Play a sound to push water out of the speaker</string>
+    <string name="clear_speaker_description">Place the phone with the speaker facing down, then start. A low tone plays at full volume for 30 seconds and moves the speaker to push water out. Repeat if the sound is still muffled.</string>
+    <string name="clear_speaker_start">Start</string>
+    <string name="clear_speaker_stop">Stop</string>
 </resources>
