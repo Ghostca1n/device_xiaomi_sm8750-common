@@ -12,6 +12,12 @@ on boot
     chown system system /sys/class/mi_display/disp-DSI-0/disp_param
     chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
 
+    # Touch gestures while the display is off (power and sensors HALs)
+    chown system system /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
+    chmod 0660 /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
+    chown system system /sys/class/touch/touch_dev/gesture_double_tap_enabled
+    chmod 0660 /sys/class/touch/touch_dev/gesture_double_tap_enabled
+
     # Thermal profiles (XiaomiParts)
     chown system system /sys/class/thermal/thermal_message/sconfig
 

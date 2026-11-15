@@ -258,6 +258,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+$(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touch/touch_dev/gesture_double_tap_enabled)
+
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/sun/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
@@ -275,7 +277,8 @@ $(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
-    sensors.dynamic_sensor_hal
+    sensors.dynamic_sensor_hal \
+    sensors.xiaomi.v2
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
