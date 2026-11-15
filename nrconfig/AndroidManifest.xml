@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineageos.nrconfig"
+    android:sharedUserId="android.uid.phone">
+
+    <application
+        android:directBootAware="true"
+        android:label="QtiNrConfig">
+
+        <receiver
+            android:name=".CarrierConfigReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.telephony.action.CARRIER_CONFIG_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

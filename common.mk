@@ -322,6 +322,7 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
+    QtiNrConfig \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
