@@ -8,6 +8,10 @@ on boot
     chown system system /sys/class/xm_power/charger/charge_interface/charging_enabled
     chmod 0660 /sys/class/xm_power/charger/charge_interface/charging_enabled
 
+    # DC dimming (XiaomiParts)
+    chown system system /sys/class/mi_display/disp-DSI-0/disp_param
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
+
     # Thermal profiles (XiaomiParts)
     chown system system /sys/class/thermal/thermal_message/sconfig
 

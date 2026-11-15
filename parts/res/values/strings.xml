@@ -47,4 +47,10 @@
     <string name="saturation_summary">Adjust the color saturation of the display</string>
     <string name="saturation_level_title">Saturation level</string>
     <string name="saturation_level_summary">100 keeps the saturation of the selected color mode</string>
+
+    <!-- DC dimming -->
+    <string name="dc_dimming_title">DC dimming</string>
+    <string name="dc_dimming_summary">Reduce flicker at low brightness</string>
+    <string name="dc_dimming_switch_title">Use DC dimming</string>
+    <string name="dc_dimming_footer">DC dimming controls low brightness by lowering the panel current instead of switching it on and off quickly. This reduces flicker, but may make colors less uniform at low brightness.</string>
 </resources>
