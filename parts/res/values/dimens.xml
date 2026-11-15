@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Initial distance of the FPS overlay from the top start corner -->
+    <dimen name="fps_info_default_offset">48dp</dimen>
+</resources>

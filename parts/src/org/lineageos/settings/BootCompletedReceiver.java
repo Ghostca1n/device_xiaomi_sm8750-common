@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import org.lineageos.settings.dcdimming.DcDimmingUtils;
+import org.lineageos.settings.fpsinfo.FpsInfoUtils;
 import org.lineageos.settings.refreshrate.RefreshRateUtils;
 import org.lineageos.settings.saturation.SaturationUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
@@ -41,5 +42,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SaturationUtils.onBootCompleted(context);
         DcDimmingUtils.onBootCompleted(context);
         RefreshRateUtils.onBootCompleted(context);
+        FpsInfoUtils.onBootCompleted(context);
     }
 }

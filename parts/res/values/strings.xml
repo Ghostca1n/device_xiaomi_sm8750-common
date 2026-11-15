@@ -59,4 +59,23 @@
     <string name="refresh_rate_summary">Force a refresh rate while specific apps are open</string>
     <string name="refresh_rate_default">Default</string>
     <string name="refresh_rate_hz"><xliff:g id="refresh_rate" example="120">%1$d</xliff:g> Hz</string>
+
+    <!-- FPS overlay -->
+    <string name="fps_info_title">FPS overlay</string>
+    <string name="fps_info_summary">Show the frame rate and system load on top of other apps</string>
+    <string name="fps_info_show_overlay_title">Show FPS overlay</string>
+    <string name="fps_info_lines_category">Additional information</string>
+    <string name="fps_info_show_cpu_usage_title">CPU usage</string>
+    <string name="fps_info_show_gpu_busy_title">GPU usage</string>
+    <string name="fps_info_show_gpu_clock_title">GPU frequency</string>
+    <string name="fps_info_show_battery_temp_title">Battery temperature</string>
+    <string name="fps_info_footer">The overlay can be moved by dragging it. It can also be toggled from Quick Settings.</string>
+    <string name="fps_info_notification_title">FPS overlay is shown</string>
+    <string name="fps_info_notification_stop">Hide</string>
+    <string name="fps_info_fps">FPS <xliff:g id="fps" example="120.0">%1$.1f</xliff:g></string>
+    <string name="fps_info_fps_unknown">FPS -</string>
+    <string name="fps_info_cpu_usage">CPU <xliff:g id="usage" example="25">%1$d</xliff:g>%%</string>
+    <string name="fps_info_gpu_busy">GPU <xliff:g id="usage" example="40">%1$d</xliff:g>%%</string>
+    <string name="fps_info_gpu_clock">GPU <xliff:g id="frequency" example="680">%1$d</xliff:g> MHz</string>
+    <string name="fps_info_battery_temp">BAT <xliff:g id="temperature" example="31.5">%1$.1f</xliff:g> \u00B0C</string>
 </resources>

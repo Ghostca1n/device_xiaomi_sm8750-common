@@ -2,5 +2,11 @@
 allow devicesettings_app vendor_sysfs_displayfeature:dir search;
 allow devicesettings_app vendor_sysfs_displayfeature:file rw_file_perms;
 
+# FPS overlay
+allow devicesettings_app vendor_sysfs_graphics:file r_file_perms;
+allow devicesettings_app vendor_sysfs_kgsl:dir search;
+allow devicesettings_app vendor_sysfs_kgsl:lnk_file read;
+allow devicesettings_app { vendor_sysfs_kgsl vendor_sysfs_kgsl_gpuclk }:file r_file_perms;
+
 # Touch
 hal_client_domain(devicesettings_app, hal_touchfeature_xiaomi)
