@@ -53,4 +53,10 @@
     <string name="dc_dimming_summary">Reduce flicker at low brightness</string>
     <string name="dc_dimming_switch_title">Use DC dimming</string>
     <string name="dc_dimming_footer">DC dimming controls low brightness by lowering the panel current instead of switching it on and off quickly. This reduces flicker, but may make colors less uniform at low brightness.</string>
+
+    <!-- Per-app refresh rate -->
+    <string name="refresh_rate_title">Per-app refresh rate</string>
+    <string name="refresh_rate_summary">Force a refresh rate while specific apps are open</string>
+    <string name="refresh_rate_default">Default</string>
+    <string name="refresh_rate_hz"><xliff:g id="refresh_rate" example="120">%1$d</xliff:g> Hz</string>
 </resources>
