@@ -45,6 +45,9 @@
     <!-- Control whether the always on display mode is enabled by default. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
+    <!-- Whether the pickup gesture sensor can wake the ambient display. -->
+    <bool name="config_dozePulsePickup">true</bool>
+
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
