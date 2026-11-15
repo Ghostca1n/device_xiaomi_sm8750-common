@@ -174,6 +174,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.target.rc \
     init.xiaomi.rc \
+    system_dlkm_modprobe.sh \
     ueventd.qcom.rc
 
 # IR

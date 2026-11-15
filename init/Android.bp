@@ -74,6 +74,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "system_dlkm_modprobe.sh",
+    src: "system_dlkm_modprobe.sh",
+    vendor: true,
+}
+
 mkdir {
     name: "vendor_modem_firmware_mountpoint",
     dir: "modem_firmware",
