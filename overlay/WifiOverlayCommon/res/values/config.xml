@@ -58,6 +58,9 @@
     <!-- Whether the P2P GO allocates the client IP address in the EAPOL frames. -->
     <bool name="config_wifiP2pGoIpAddressAllocationInEapolFrames">true</bool>
 
+    <!-- Whether multiple Wi-Fi Aware data paths can share one NDI. -->
+    <bool name="config_wifiAllowMultipleNetworksOnSameAwareNdi">true</bool>
+
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool name="config_wifi_softap_acs_supported">true</bool>
 
