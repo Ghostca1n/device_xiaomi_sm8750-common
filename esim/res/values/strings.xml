@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="esim_title">eSIM</string>
+    <string name="esim_summary">Use the embedded SIM in the second slot</string>
+    <string name="esim_enable">Use eSIM</string>
+    <string name="esim_footer">The second SIM slot switches to the embedded SIM, and a physical SIM in it can\'t be used while the eSIM is on. eSIM profiles are downloaded and managed from the SIMs settings.</string>
+    <string name="esim_in_use_title">eSIM in use</string>
+    <string name="esim_in_use_message">Turn off or remove the active eSIM profile before turning off the eSIM.</string>
+    <string name="esim_switch_failed">Couldn\'t switch the SIM slot</string>
+</resources>

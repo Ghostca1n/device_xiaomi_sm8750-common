@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineageos.esim"
+    android:sharedUserId="android.uid.phone">
+
+    <application
+        android:defaultToDeviceProtectedStorage="true"
+        android:directBootAware="true"
+        android:label="@string/esim_title"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
+
+        <activity
+            android:name=".EsimSettingsActivity"
+            android:exported="true"
+            android:label="@string/esim_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.wireless" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_esim" />
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="-10" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/esim_summary" />
+        </activity>
+    </application>
+</manifest>
