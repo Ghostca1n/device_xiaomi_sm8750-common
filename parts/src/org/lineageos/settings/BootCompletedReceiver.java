@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import org.lineageos.settings.saturation.SaturationUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.touch.TouchUtils;
 
@@ -35,5 +36,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         ThermalUtils.startService(context);
         TouchUtils.onBootCompleted(context);
+        SaturationUtils.onBootCompleted(context);
     }
 }

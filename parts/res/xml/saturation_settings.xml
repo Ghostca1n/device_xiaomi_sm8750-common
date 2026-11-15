@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/saturation_title">
+
+    <SeekBarPreference
+        android:key="display_saturation"
+        android:title="@string/saturation_level_title"
+        android:summary="@string/saturation_level_summary"
+        android:max="200"
+        android:defaultValue="100"
+        app:min="0"
+        app:showSeekBarValue="true"
+        app:updatesContinuously="true" />
+
+</PreferenceScreen>

@@ -41,4 +41,10 @@
     <string name="touch_edge_suppression_level">Level <xliff:g id="level" example="2">%1$d</xliff:g></string>
     <string name="touch_glove_mode_title">Glove mode</string>
     <string name="touch_glove_mode_summary">Increase touchscreen sensitivity for use with gloves</string>
+
+    <!-- Saturation -->
+    <string name="saturation_title">Saturation</string>
+    <string name="saturation_summary">Adjust the color saturation of the display</string>
+    <string name="saturation_level_title">Saturation level</string>
+    <string name="saturation_level_summary">100 keeps the saturation of the selected color mode</string>
 </resources>
