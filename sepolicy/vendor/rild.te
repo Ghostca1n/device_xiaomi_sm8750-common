@@ -1,0 +1,2 @@
+# The RIL publishes the IMEIs and serial numbers read from the modem
+set_prop(rild, vendor_deviceid_prop)
