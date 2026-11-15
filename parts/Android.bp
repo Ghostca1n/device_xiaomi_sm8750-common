@@ -17,4 +17,15 @@ android_app {
     static_libs: [
         "org.lineageos.settings.resources",
     ],
+
+    required: [
+        "privapp-permissions-org.lineageos.settings",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-org.lineageos.settings",
+    src: "privapp-permissions-org.lineageos.settings.xml",
+    relative_install_path: "permissions",
+    system_ext_specific: true,
 }

@@ -16,52 +16,46 @@
 
 package org.lineageos.settings.thermal;
 
-import android.app.ActivityManager;
-import android.app.ActivityTaskManager;
-import android.app.ActivityTaskManager.RootTaskInfo;
-import android.app.IActivityTaskManager;
-import android.app.TaskStackListener;
 import android.app.Service;
-import android.app.TaskStackListener;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
-import android.os.RemoteException;
 import android.util.Log;
 
-public class ThermalService extends Service {
+import org.lineageos.settings.utils.ForegroundAppTracker;
+
+public class ThermalService extends Service implements ForegroundAppTracker.Listener {
 
     private static final String TAG = "ThermalService";
     private static final boolean DEBUG = false;
 
-    private String mPreviousApp;
     private ThermalUtils mThermalUtils;
 
-    private IActivityTaskManager mActivityTaskManager;
-
-    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            mPreviousApp = "";
-            mThermalUtils.setDefaultThermalProfile();
+            if (Intent.ACTION_SCREEN_OFF.equals(intent.getAction())) {
+                mThermalUtils.setDefaultThermalProfile();
+                return;
+            }
+            final String foregroundApp = ForegroundAppTracker.getInstance().getForegroundApp();
+            if (foregroundApp != null) {
+                mThermalUtils.setThermalProfile(foregroundApp);
+            } else {
+                mThermalUtils.setDefaultThermalProfile();
+            }
         }
     };
 
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
-        try {
-            mActivityTaskManager = ActivityTaskManager.getService();
-            mActivityTaskManager.registerTaskStackListener(mTaskListener);
-        } catch (RemoteException e) {
-            // Do nothing
-        }
+        super.onCreate();
         mThermalUtils = new ThermalUtils(this);
         registerReceiver();
-        super.onCreate();
+        ForegroundAppTracker.getInstance().addListener(this);
     }
 
     @Override
@@ -71,32 +65,26 @@ public class ThermalService extends Service {
     }
 
     @Override
+    public void onDestroy() {
+        ForegroundAppTracker.getInstance().removeListener(this);
+        unregisterReceiver(mIntentReceiver);
+        super.onDestroy();
+    }
+
+    @Override
     public IBinder onBind(Intent intent) {
         return null;
+    }
+
+    @Override
+    public void onForegroundAppChanged(String packageName) {
+        mThermalUtils.setThermalProfile(packageName);
     }
 
     private void registerReceiver() {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_OFF);
         filter.addAction(Intent.ACTION_SCREEN_ON);
-        this.registerReceiver(mIntentReceiver, filter);
+        registerReceiver(mIntentReceiver, filter);
     }
-
-    private final TaskStackListener mTaskListener = new TaskStackListener() {
-        @Override
-        public void onTaskStackChanged() {
-            try {
-                final RootTaskInfo info = mActivityTaskManager.getFocusedRootTaskInfo();
-                if (info == null || info.topActivity == null) {
-                    return;
-                }
-
-                String foregroundApp = info.topActivity.getPackageName();
-                if (!foregroundApp.equals(mPreviousApp)) {
-                    mThermalUtils.setThermalProfile(foregroundApp);
-                    mPreviousApp = foregroundApp;
-                }
-            } catch (Exception e) {}
-        }
-    };
 }
