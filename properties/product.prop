@@ -31,5 +31,3 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=true
 
-# Updater
-lineage.updater.uri=https://raw.githubusercontent.com/xiaomi-dada/ota/lineage-24.0/{device}/{incr}.json
