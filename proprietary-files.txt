@@ -150,6 +150,7 @@ vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
+vendor/lib64/lib_bt_lhdc.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so;DISABLE_DEPS
@@ -157,6 +158,11 @@ vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/libbluetooth_audio_session_aidl_qti.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
+
+# Bluetooth codec and policy configuration
+vendor/etc/a2dp_audio_policy_configuration.xml;MAKE_COPY_RULE_ONLY
+vendor/etc/aidl/hfp/hfp_codec_capabilities.xml;MAKE_COPY_RULE_ONLY
+vendor/etc/bluetooth_qti_audio_policy_configuration.xml;MAKE_COPY_RULE_ONLY
 
 # CDSP
 vendor/bin/cdsprpcd
