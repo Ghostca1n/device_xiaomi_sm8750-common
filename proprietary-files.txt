@@ -150,7 +150,11 @@ vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
+vendor/lib64/lib_bt_aptx.so
+vendor/lib64/lib_bt_ble.so
+vendor/lib64/lib_bt_bundle.so
 vendor/lib64/lib_bt_lhdc.so
+vendor/lib64/lib_bt_mihc.so
 
 # Bluetooth audio policy and HFP capabilities
 vendor/etc/a2dp_audio_policy_configuration.xml;MAKE_COPY_RULE_ONLY
